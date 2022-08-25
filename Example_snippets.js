@@ -3,13 +3,13 @@ example_snippets={
     "title": "Sum of numbers in a string",
     "tags": ["string"],
     "language":"python",
-    "content":```
+    "content":`
     Explain briefly what the snippet does.
     - Explain briefly how the snippet works.
     - Use bullet points for your snippet's explanation.
     - Try to explain everything briefly but clearly.
-    ```,
-    "code":```
+    `,
+    "code":`
 def findSum(str1):
 temp = "0"
 Sum = 0
@@ -20,10 +20,10 @@ for ch in str1:
         Sum += int(temp)
         temp = "0"
 return Sum + int(temp)
-    ```,
-    "exaples":```
+    `,
+    "exaples":`
 print(findSum("12ab20z40")) #72
 print(findSum("120nb")) #120
 print(findSum("1m2n2")) #5
-    ```
+    `
 }
