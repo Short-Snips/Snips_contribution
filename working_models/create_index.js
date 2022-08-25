@@ -22,6 +22,6 @@ export default function Create_index(Articles,tags)
         })
 
     })
-    console.log(indexes)
+    // console.log(indexes)
     return indexes
 }

@@ -4,11 +4,13 @@ export const Articles=[
         "title": "Sum of numbers in a string",
         "tags": ["string"],
         "language":"python",
+        "short_intro":" function calculates the sum of all the numbers in the given string",
+        "contributor_name":"dinesh bhuwad",
         "content":`
-        Explain briefly what the snippet does.
-        - Explain briefly how the snippet works.
-        - Use bullet points for your snippet's explanation.
-        - Try to explain everything briefly but clearly.
+The function calculates the sum of all the numbers in the given string.
+- The function traverses through all the characters if the string.
+- If the chracter is a number, the function adds its value to the result.
+- Multiple consecutive numbers are considered as one number.
         `,
         "code":`
 def findSum(str1):
