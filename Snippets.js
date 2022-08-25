@@ -29,3 +29,6 @@ print(findSum("1m2n2")) #5
         `
     }
 ]
+
+
+export const tags=["string"]
