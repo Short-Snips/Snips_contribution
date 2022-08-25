@@ -1,4 +1,4 @@
-export default Articles=[
+export const Articles=[
     {
         "uuid":"98879124-986e-4a08-887f-5e918e89a558",
         "title": "Sum of numbers in a string",
