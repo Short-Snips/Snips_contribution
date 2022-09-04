@@ -103,7 +103,11 @@ filter.addEventListener("complete", ev=>{
     <div class="code" id="codeEditor">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, est?
     </div>
+<<<<<<< HEAD
     <div class="code" id="editor">
+=======
+    <div class="code example" id="editor">
+>>>>>>> 2546315951180268fca2551650228b0e502d98f9
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, est?
     </div>
 
