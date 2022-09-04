@@ -2,9 +2,9 @@ export const Articles=[
     {
         "uuid":"98879124-986e-4a08-887f-5e918e89a558",
         "title": "Sum of numbers in a string",
-        "tags": ["string"],
+        "tags": ["String"],
         "language":"python",
-        "short_intro":" function calculates the sum of all the numbers in the given string",
+        "short_intro":" Function calculates the sum of all the numbers in the given string",
         "contributor_name":"dinesh bhuwad",
         "contribution_date":"19/2/2022",
         "content":`
