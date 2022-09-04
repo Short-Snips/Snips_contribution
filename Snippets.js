@@ -6,13 +6,14 @@ export const Articles=[
         "language":"python",
         "short_intro":" function calculates the sum of all the numbers in the given string",
         "contributor_name":"dinesh bhuwad",
+        "contribution_date":"19/2/2022",
         "content":`
 The function calculates the sum of all the numbers in the given string.
 - The function traverses through all the characters if the string.
 - If the chracter is a number, the function adds its value to the result.
 - Multiple consecutive numbers are considered as one number.
         `,
-        "code":`
+        "code":`# Sum of numbers in a string
 def findSum(str1):
     temp = "0"
     Sum = 0
@@ -24,7 +25,7 @@ def findSum(str1):
             temp = "0"
     return Sum + int(temp)
         `,
-        "exaples":`
+        "examples":`#examples
 print(findSum("12ab20z40")) #72
 print(findSum("120nb")) #120
 print(findSum("1m2n2")) #5
