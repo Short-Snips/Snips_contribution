@@ -275,6 +275,39 @@ Input: numbers = [-1,0], target = -1
 Output: [1,2]
 Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We return [1, 2].
         `
+    },
+    {
+        "uuid": "d545798e-94f0-420b-a8ec-84a3ae57db2e",
+        "title": "Arranging Coins",
+        "tags": ["Searching"],
+        "language": "java",
+        "short_intro": "Given the integer n, return the number of complete rows of the staircase you will build.",
+        "contributor_name": "Janak Avhad",
+        "contribution_date": "19/2/2022",
+        "content": `
+        You have n coins and you want to build a staircase with these coins. 
+        The staircase consists of k rows where the ith row has exactly i coins. 
+        The last row of the staircase may be incomplete.
+        `,
+        "code": `# Arranging Coins
+        class Solution {
+            public int arrangeCoins(int n) {
+                if (n < 0) {
+                    throw new IllegalArgumentException("Input Number is invalid. Only positive numbers are allowed");
+                }
+                return (int) (Math.sqrt(2 * (long) n + 0.25) - 0.5);
+            }
+        }
+        `,
+        "examples": `#examples
+        Input: n = 5
+        Output: 2
+        Explanation: Because the 3rd row is incomplete, we return 2.
+
+        Input: n = 8
+        Output: 3
+        Explanation: Because the 4th row is incomplete, we return 3.
+        `
     }
 
 
