@@ -177,7 +177,7 @@ The function returns the median for the row wise sorted matrix.
 
         R = 3, C = 1
         M = [[1], [2], [3]]
-        # 2
+        # 2`
     },
     {
         "uuid": "0f620672-b230-4c1b-8d60-74c1cc4dff21",
