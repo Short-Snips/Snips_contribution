@@ -13,7 +13,7 @@ export default function Create_index(Articles,tags)
         indexes.uuid[ev.uuid]=ev
         indexes.title[ev.title]=ev
         ev.tags.forEach(ev2=>{
-            if(ev2 in Object.keys(indexes.tags))
+            if(Object.keys(indexes.tags).includes(ev2))
             {
                 indexes.tags[ev2].push(ev)
             }else {
