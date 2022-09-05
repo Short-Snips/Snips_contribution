@@ -308,6 +308,53 @@ Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We ret
         Output: 3
         Explanation: Because the 4th row is incomplete, we return 3.
         `
+    },
+    {
+        "uuid": "20320c05-772a-4392-b917-14c51e628815",
+        "title": "Find Smallest Letter Greater Than Target",
+        "tags": ["Searching"],
+        "language": "java",
+        "short_intro": "Return the smallest character in the array that is larger than target.",
+        "contributor_name": "Janak Avhad",
+        "contribution_date": "19/2/2022",
+        "content": `
+        Given a characters array letters that is sorted in non-decreasing order and a character target, 
+        return the smallest character in the array that is larger than target.
+        `,
+        "code": `# Find Smallest Letter Greater Than Target
+        class Solution {
+            public char nextGreatestLetter(char[] letters, char target) 
+            {
+        int start=0;
+                char ans =' ' ;
+                int end=letters.length-1;
+                while(start<=end)
+                {
+                    int mid=start+(end-start)/2;
+                    if(letters[mid]<=target)// same ele ni chai da 
+                        start=mid+1;// i want bigger 
+                    else
+                    {       
+                       end=mid-1;  //  we are not inc = coz it is checked above now 
+                        ans=letters[mid];   //it could be a possible ans so we stored it
+                    }
+                }
+               if(ans==' ')   // just an optional check but it is not required 
+                   return letters[0];
+                else
+                    return ans;
+            }
+        }
+        `,
+        "examples": `#examples
+        Input: n = 5
+        Output: 2
+        Explanation: Because the 3rd row is incomplete, we return 2.
+
+        Input: n = 8
+        Output: 3
+        Explanation: Because the 4th row is incomplete, we return 3.
+        `
     }
 
 
