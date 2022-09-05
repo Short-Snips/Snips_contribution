@@ -89,16 +89,95 @@ static ArrayList<Integer> spirallyTraverse(int matrix[][], int r, int c)
         `,
         "examples":`#examples
         matrix[][] = {{1, 2, 3, 4},
-        {5, 6, 7, 8},
-        {9, 10, 11, 12},
-        {13, 14, 15,16}} # 1 2 3 4 8 12 16 15 14 13 9 5 6 7 11 10
+                      {5, 6, 7, 8},
+                      {9, 10, 11, 12},
+                      {13, 14, 15,16}}
+         # 1 2 3 4 8 12 16 15 14 13 9 5 6 7 11 10
 
         matrix[][] = {{1, 2, 3, 4},
-           {5, 6, 7, 8},
-           {9, 10, 11, 12}} # 1 2 3 4 8 12 11 10 9 5 6 7
+                      {5, 6, 7, 8},
+                      {9, 10, 11, 12}} 
+        # 1 2 3 4 8 12 11 10 9 5 6 7
 
 
         `
+
+    },{
+        "uuid":"08a729df-9b1f-4572-94cf-fb918fd2a557",
+        "title": "Search a 2D Matrix",
+        "tags": ["Matrix"],
+        "language":"java",
+        "short_intro":"Function searchs for a number in the given integer matrix",
+        "contributor_name":"dinesh bhuwad",
+        "contribution_date":"5/9/2022",
+        "content":`
+The function searchs for a number in the given integer matrix.
+- The function returns a boolean true if the number is present and false if the value is not present.
+        `,
+        "code":`# Searching an element in the matrix
+        public boolean searchMatrix(int[][] matrix, int target) {
+            for(int i=0;i<matrix.length;i++){
+                if(matrix[i][0]>target) return false;
+                for(int j=0;j<matrix[i].length;j++){
+                    if(matrix[i][j]==target) return true;
+                    if(matrix[i][j]>target) return false;
+                }
+            }
+             return false;
+        }
+        `,
+        "examples":`#examples
+        matrix = [[1,3,5,7],
+                  [10,11,16,20],
+                  [23,30,34,60]], 
+        target = 3 
+        # true 
+
+        matrix = [[1,3,5,7],
+                  [10,11,16,20],
+                  [23,30,34,60]], 
+        target = 13
+        # false
+        `
+    },{
+        "uuid":"641b5f3f-9cc0-4b02-b914-21dff4f1bcf7",
+        "title": "Median in a row-wise sorted Matrix",
+        "tags": ["Matrix"],
+        "language":"java",
+        "short_intro":" Function returns the median for the row wise sorted matrix",
+        "contributor_name":"dinesh bhuwad",
+        "contribution_date":"5/9/2022",
+        "content":`
+The function returns the median for the row wise sorted matrix.
+- Given a row wise sorted matrix of size RxC where R and C are always odd, the function returns  the median of the matrix.
+        `,
+        "code":`# Median in a row-wise sorted Matrix
+        int median(int matrix[][], int r, int c) {
+            ArrayList<Integer>b = new ArrayList<>();
+             for(int i = 0; i < r ;i++){
+               for(int j = 0; j < c;j++){
+                   b.add(matrix[i][j]);
+                   
+               }
+               
+           }
+           
+           Collections.sort(b);
+           int a = b.size()/2;
+           
+           return b.get(a);
+        }
+        `,
+        "examples":`#examples
+        R = 3, C = 3
+        M = [[1, 3, 5], 
+             [2, 6, 9], 
+             [3, 6, 9]]
+        # 5
+
+        R = 3, C = 1
+        M = [[1], [2], [3]]
+        # 2
     },
     {
         "uuid":"0f620672-b230-4c1b-8d60-74c1cc4dff21",
