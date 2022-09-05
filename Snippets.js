@@ -99,6 +99,54 @@ static ArrayList<Integer> spirallyTraverse(int matrix[][], int r, int c)
 
 
         `
+    },
+    {
+        "uuid":"0f620672-b230-4c1b-8d60-74c1cc4dff21",
+        "title": "Square root of number without using inbuilt function",
+        "tags": ["Math"],
+        "language":"java",
+        "short_intro":" Function calculates the sum of all the numbers in the given string",
+        "contributor_name":"Janak Avhad",
+        "contribution_date":"19/2/2022",
+        "content":`
+        Given a non-negative integer x, compute and return the square root of x.
+
+        Since the return type is an integer, the decimal digits are truncated, and only the integer part of the result is returned.
+        `,
+        "code":`# Square root of number without using inbuilt function
+        class Solution {
+            public int mySqrt(int x) {
+             if (x == 0 || x == 1) return x;
+                int start=0;
+                int end=x;
+                while(start<=end){
+                    int mid=start+(end-start)/2;
+                    //long val=mid*mid;
+                    if(mid == x / mid){
+                        return mid;
+                    }
+                    else if(mid > x / mid){
+                        end=mid-1;
+                    }
+                    else{
+                        start=mid+1;
+                    }
+                }
+                return end;
+            }
+        }
+        `,
+        "examples":`#examples
+        Example 1:
+
+        Input: x = 4
+        Output: 2
+        Example 2:
+        
+        Input: x = 8
+        Output: 2
+        Explanation: The square root of 8 is 2.82842..., and since the decimal part is truncated, 2 is returned.
+        `
     }
 
 ]
