@@ -55,7 +55,7 @@ filter.addEventListener("complete", ev=>{
 
    }
    else{
-
+    let logo_image="python-icon.svg";
     let aa=[]
     article.content.split("\n").forEach(ev=>{
       if (ev !== "")
@@ -103,7 +103,7 @@ filter.addEventListener("complete", ev=>{
     <div class="code" id="codeEditor">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, est?
     </div>
-<<<<<<< HEAD
+
     <div class="code" id="editor">
 =======
     <div class="code example" id="editor">
