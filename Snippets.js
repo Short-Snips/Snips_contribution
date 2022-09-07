@@ -229,7 +229,7 @@ The function returns the median for the row wise sorted matrix.
     },{
         "uuid":"da9c607e-98e7-4f96-b892-dca06dba10d9",
         "title": "Reverse a LinkedList ",
-        "tags": ["Linkedlist"],
+        "tags": ["linkedlist"],
         "language":"java",
         "short_intro":" The given function reverses the given linkedlist",
         "contributor_name":"dinesh bhuwad",

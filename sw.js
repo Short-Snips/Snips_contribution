@@ -1,96 +1,70 @@
+var APP_PREFIX = 'ApplicationName_'     // Identifier for this app (this needs to be consistent across every cache update)
+var VERSION = 'version_01'              // Version of the off-line cache (change this value everytime you want to update cache)
+var CACHE_NAME = APP_PREFIX + VERSION
+
+var URLS = [    
+  "/Snips_contribution/index.html",
+  "/Snips_contribution/article.html",
+  "/Snips_contribution/Styles/index.css",
+  "/Snips_contribution/Styles/article.css",
+  "/Snips_contribution/saas_index.js",
+  "/Snips_contribution/saas_article.js",
+  "/Snips_contribution/index.js",
+  "/Snips_contribution/article.js",
+  "/Snips_contribution/working_models/index.js",
+  "/Snips_contribution/working_models/create_index.js",
+  "/Snips_contribution/Snippets.js"
+]
 
 
-const addResourcesToCache = async (resources) => {
-  const cache = await caches.open("v1");
-  await cache.addAll(resources);
-};
-
-self.addEventListener("install", (event) => {
-  event.waitUntil(
-    addResourcesToCache([
-      "/index.html",
-      "/article.html",
-      "/Styles/index.css",
-      "/Styles/article.css",
-      "/saas_index.js",
-      "/saas_article.js",
-      "/index.js",
-      "/article.js",
-      "working_models/index.js",
-      "working_models/create_index.js",
-  
-    ])
-  );
-
-});
-
-const putInCache = async (request, response) => {
-    const cache = await caches.open("v1");
-    await cache.put(request, response);
-  };
-  
-
-  const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
-    // First try to get the resource from the cache
-    const responseFromCache = await caches.match(request);
-    if (responseFromCache) {
-      return responseFromCache;
-    }
-  
-    // Next try to get the resource from the network
-    try {
-      const responseFromNetwork = await fetch(request);
-      // response may be used only once
-      // we need to save clone to put one copy in cache
-      // and serve second one
-      putInCache(request, responseFromNetwork.clone());
-      return responseFromNetwork;
-    } catch (error) {
-      const fallbackResponse = await caches.match(fallbackUrl);
-      if (fallbackResponse) {
-        return fallbackResponse;
+// Respond with cached resources
+self.addEventListener('fetch', function (e) {
+  // console.log('fetch request : ' + e.request.url)
+  e.respondWith(
+    caches.match(e.request).then(function (request) {
+      if (request) { // if cache is available, respond with cache
+        // console.log('responding with cache : ' + e.request.url)
+        return request
+      } else {       // if there are no cache, try fetching request
+        // console.log('file is not cached, fetching : ' + e.request.url)
+        return fetch(e.request)
       }
-      // when even the fallback response is not available,
-      // there is nothing we can do, but we must always
-      // return a Response object
-      return new Response("Network error happened", {
-        status: 408,
-        headers: { "Content-Type": "text/plain" },
-      });
-    }
-  };
-  
-  self.addEventListener("fetch", (event) => {
-    //   console.log(event.request.url.includes("Snippets.js"),event);
-    // if()
-    // {
-    //     const responseFromNetwork = await fetch(request);
-    //     return responseFromNetwork
-    // }
-    // else
-    // {
-    //     const responseFromCache = await caches.match(request);
-    //     if (responseFromCache) {
-    //         return responseFromCache;
-    //       }
-    // }
 
-    event.respondWith(
-      cacheFirst({
-        request: event.request,
-        fallbackUrl: "/gallery/myLittleVader.jpg",
+      // You can omit if/else for console.log & put one line below like this too.
+      // return request || fetch(e.request)
+    })
+  )
+})
+
+// Cache resources
+self.addEventListener('install', function (e) {
+  e.waitUntil(
+    caches.open(CACHE_NAME).then(function (cache) {
+      // console.log('installing cache : ' + CACHE_NAME)
+      return cache.addAll(URLS)
+    })
+  )
+})
+
+
+// Delete outdated caches
+self.addEventListener('activate', function (e) {
+  e.waitUntil(
+    caches.keys().then(function (keyList) {
+      // `keyList` contains all cache names under your username.github.io
+      // filter out ones that has this app prefix to create white list
+      var cacheWhitelist = keyList.filter(function (key) {
+        return key.indexOf(APP_PREFIX)
       })
-    );
-  });
+      // add current cache name to white list
+      cacheWhitelist.push(CACHE_NAME)
 
-
-  const enableNavigationPreload = async () => {
-    if (self.registration.navigationPreload) {
-      // Enable navigation preloads!
-      await self.registration.navigationPreload.enable();
-    }
-  };
-  
-  self.addEventListener("activate", (event) => {
-    event.waitUntil(enableNavigationPreload());
-  });
+      return Promise.all(keyList.map(function (key, i) {
+        if (cacheWhitelist.indexOf(key) === -1) {
+          // console.log('deleting cache : ' + keyList[i] )
+          return caches.delete(keyList[i])
+        }
+      }))
+    })
+  )
+})

@@ -64,7 +64,7 @@ search.addEventListener("input",ev=>{
     {
         if(search_icon.src !=="Assests/Images/search-icon-cross.svg")
         {
-            // search_icon.src="Assests/Images/search-icon-cross.svg"
+            search_icon.src="Assests/Images/search-icon-cross.svg"
             
         }
         search_companion(ev.target.value) 
