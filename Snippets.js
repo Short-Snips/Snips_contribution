@@ -1,19 +1,19 @@
-export const Articles = [
+export const Articles=[
     {
-        "uuid": "98879124-986e-4a08-887f-5e918e89a558",
+        "uuid":"98879124-986e-4a08-887f-5e918e89a558",
         "title": "Sum of numbers in a string",
         "tags": ["String"],
-        "language": "python",
-        "short_intro": " Function calculates the sum of all the numbers in the given string",
-        "contributor_name": "dinesh bhuwad",
-        "contribution_date": "19/2/2022",
-        "content": `
+        "language":"python",
+        "short_intro":" Function calculates the sum of all the numbers in the given string",
+        "contributor_name":"dinesh bhuwad",
+        "contribution_date":"19/2/2022",
+        "content":`
 The function calculates the sum of all the numbers in the given string.
 - The function traverses through all the characters if the string.
 - If the chracter is a number, the function adds its value to the result.
 - Multiple consecutive numbers are considered as one number.
         `,
-        "code": `# Sum of numbers in a string
+        "code":`# Sum of numbers in a string
 def findSum(str1):
     temp = "0"
     Sum = 0
@@ -25,25 +25,25 @@ def findSum(str1):
             temp = "0"
     return Sum + int(temp)
         `,
-        "examples": `#examples
+        "examples":`#examples
 print(findSum("12ab20z40")) #72
 print(findSum("120nb")) #120
 print(findSum("1m2n2")) #5
         `
-    }, {
-        "uuid": "a7ce11fb-a603-405e-b79c-13b13c7ce694",
+    },{
+        "uuid":"a7ce11fb-a603-405e-b79c-13b13c7ce694",
         "title": "Spiral Traversal of Matrix ",
         "tags": ["Matrix"],
-        "language": "java",
-        "short_intro": "Function prints the elements of the string in a spiral sequence",
-        "contributor_name": "Dinesh Bhuwad",
-        "contribution_date": "5/9/2022",
-        "content": `
+        "language":"java",
+        "short_intro":"Function prints the elements of the string in a spiral sequence",
+        "contributor_name":"Dinesh Bhuwad",
+        "contribution_date":"5/9/2022",
+        "content":`
 The function prints the elements of the string in a spiral sequence.
 - It uses four pointers - right,left,top & bottom.
 - If traverses in a clockwise direction.
         `,
-        "code": `
+        "code":`
 static ArrayList<Integer> spirallyTraverse(int matrix[][], int r, int c)
         {
             int top,bottom,left,right,i;
@@ -87,7 +87,7 @@ static ArrayList<Integer> spirallyTraverse(int matrix[][], int r, int c)
             return a;
         }
         `,
-        "examples": `#examples
+        "examples":`#examples
         matrix[][] = {{1, 2, 3, 4},
                       {5, 6, 7, 8},
                       {9, 10, 11, 12},
@@ -180,19 +180,19 @@ The function returns the median for the row wise sorted matrix.
         # 2`
     },
     {
-        "uuid": "0f620672-b230-4c1b-8d60-74c1cc4dff21",
+        "uuid":"0f620672-b230-4c1b-8d60-74c1cc4dff21",
         "title": "Square root of number without using inbuilt function",
         "tags": ["Math"],
-        "language": "java",
-        "short_intro": " Function calculates the sum of all the numbers in the given string",
-        "contributor_name": "Janak Avhad",
-        "contribution_date": "19/2/2022",
-        "content": `
+        "language":"java",
+        "short_intro":" Function calculates the sum of all the numbers in the given string",
+        "contributor_name":"Janak Avhad",
+        "contribution_date":"19/2/2022",
+        "content":`
         Given a non-negative integer x, compute and return the square root of x.
 
         Since the return type is an integer, the decimal digits are truncated, and only the integer part of the result is returned.
         `,
-        "code": `# Square root of number without using inbuilt function
+        "code":`# Square root of number without using inbuilt function
         class Solution {
             public int mySqrt(int x) {
              if (x == 0 || x == 1) return x;
@@ -215,7 +215,7 @@ The function returns the median for the row wise sorted matrix.
             }
         }
         `,
-        "examples": `#examples
+        "examples":`#examples
         Example 1:
 
         Input: x = 4
@@ -226,139 +226,94 @@ The function returns the median for the row wise sorted matrix.
         Output: 2
         Explanation: The square root of 8 is 2.82842..., and since the decimal part is truncated, 2 is returned.
         `
-    },
-    {
-        "uuid": "0d2e68c9-9004-45ac-96d1-9c8865dd1ce4",
-        "title": "Two Sum II - Input Array Is Sorted",
-        "tags": ["Searching"],
-        "language": "java",
-        "short_intro": "Find two numbers such that they add up to a specific target number",
-        "contributor_name": "Janak Avhad",
-        "contribution_date": "19/2/2022",
-        "content": `
-        Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. Let these two numbers be numbers[index1] and numbers[index2] where 1 <= index1 < index2 <= numbers.length.
-        Return the indices of the two numbers, index1 and index2, added by one as an integer array [index1, index2] of length 2.
+    },{
+        "uuid":"da9c607e-98e7-4f96-b892-dca06dba10d9",
+        "title": "Reverse a LinkedList ",
+        "tags": ["linkedlist"],
+        "language":"java",
+        "short_intro":" The given function reverses the given linkedlist",
+        "contributor_name":"dinesh bhuwad",
+        "contribution_date":"7/9/2022",
+        "content":`
+    The function reverses the given linkedlist.
+    - The time complexity of the function is O(N).
+    - The space complexity of the function is O(1).
         `,
-        "code": `#  Two Sum II - Input Array Is Sorted
-        class Solution {
-            public int[] twoSum(int[] numbers, int target) {
-                int start = 0, end = numbers.length-1;
-                while(start<end){
-                    if (numbers[start]+numbers[end]>target){
-                        end--;
-                    }
-                    else if ((numbers[start]+numbers[end]<target)){
-                        start++;
-                    }
-                    else{
-                        break;
-                    }
-                }
-                    
-                return new int[]{start+1, end+1};
+        "code":`
+        Node reverse(Node node)
+        {
+            Node prev = null;
+            Node current = node;
+            Node next = null;
+            while (current != null) {
+                next = current.next;
+                current.next = prev;
+                prev = current;
+                current = next;
+            }
+            node = prev;
+            return node;
+
+            while (node != null) {
+                System.out.print(node.data + " ");
+                node = node.next;
             }
         }
         `,
-        "examples": `#examples
-        Example 1:
-Input: numbers = [2,7,11,15], target = 9
-Output: [1,2]
-Explanation: The sum of 2 and 7 is 9. Therefore, index1 = 1, index2 = 2. We return [1, 2].
-Example 2:
-
-Input: numbers = [2,3,4], target = 6
-Output: [1,3]
-Explanation: The sum of 2 and 4 is 6. Therefore index1 = 1, index2 = 3. We return [1, 3].
-Example 3:
-
-Input: numbers = [-1,0], target = -1
-Output: [1,2]
-Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We return [1, 2].
+        "examples":`#examples
+        Input : 1->2->3->4->NULL
+        Output : 4->3->2->1->NULL
+        
+        Input: 1->2->3->4->5->NULL 
+        Output: 5->4->3->2->1->NULL
+        
         `
-    },
-    {
-        "uuid": "d545798e-94f0-420b-a8ec-84a3ae57db2e",
-        "title": "Arranging Coins",
-        "tags": ["Searching"],
-        "language": "java",
-        "short_intro": "Given the integer n, return the number of complete rows of the staircase you will build.",
-        "contributor_name": "Janak Avhad",
-        "contribution_date": "19/2/2022",
-        "content": `
-        You have n coins and you want to build a staircase with these coins. 
-        The staircase consists of k rows where the ith row has exactly i coins. 
-        The last row of the staircase may be incomplete.
-        `,
-        "code": `# Arranging Coins
-        class Solution {
-            public int arrangeCoins(int n) {
-                if (n < 0) {
-                    throw new IllegalArgumentException("Input Number is invalid. Only positive numbers are allowed");
-                }
-                return (int) (Math.sqrt(2 * (long) n + 0.25) - 0.5);
-            }
-        }
-        `,
-        "examples": `#examples
-        Input: n = 5
-        Output: 2
-        Explanation: Because the 3rd row is incomplete, we return 2.
 
-        Input: n = 8
-        Output: 3
-        Explanation: Because the 4th row is incomplete, we return 3.
-        `
-    },
-    {
-        "uuid": "20320c05-772a-4392-b917-14c51e628815",
-        "title": "Find Smallest Letter Greater Than Target",
-        "tags": ["Searching"],
-        "language": "java",
-        "short_intro": "Return the smallest character in the array that is larger than target.",
-        "contributor_name": "Janak Avhad",
-        "contribution_date": "19/2/2022",
-        "content": `
-        Given a characters array letters that is sorted in non-decreasing order and a character target, 
-        return the smallest character in the array that is larger than target.
+    },{
+        "uuid":"6da2db53-d0a4-48b8-b0c1-7e1d2b83d0b6",
+        "title": "Detect loops in a given linkedlist",
+        "tags": ["Linkedlist"],
+        "language":"java",
+        "short_intro":" Function calculates the sum of all the numbers in the given string",
+        "contributor_name":"dinesh bhuwad",
+        "contribution_date":"7/9/2022",
+        "content":`
+The function returns a boolean value after checking if loop is present in the linkedlist.
+- The time complexity of the function is O(N).
+- The space complexity of the function is O(1).
         `,
-        "code": `# Find Smallest Letter Greater Than Target
-        class Solution {
-            public char nextGreatestLetter(char[] letters, char target) 
-            {
-        int start=0;
-                char ans =' ' ;
-                int end=letters.length-1;
-                while(start<=end)
-                {
-                    int mid=start+(end-start)/2;
-                    if(letters[mid]<=target)// same ele ni chai da 
-                        start=mid+1;// i want bigger 
-                    else
-                    {       
-                       end=mid-1;  //  we are not inc = coz it is checked above now 
-                        ans=letters[mid];   //it could be a possible ans so we stored it
-                    }
+        "code":`
+        public static boolean detectLoop(Node head){
+        
+            Node slow = head;
+            Node fast = head;
+            
+            while(fast.next != null && fast.next.next != null){
+                slow = slow.next;
+                fast = fast.next.next;
+                if(slow == fast){
+                    return true;
                 }
-               if(ans==' ')   // just an optional check but it is not required 
-                   return letters[0];
-                else
-                    return ans;
             }
-        }
+            
+            return false;
+         }
         `,
-        "examples": `#examples
-        Input: n = 5
-        Output: 2
-        Explanation: Because the 3rd row is incomplete, we return 2.
-
-        Input: n = 8
-        Output: 3
-        Explanation: Because the 4th row is incomplete, we return 3.
+        "examples":`#examples
+        N = 3
+        value[] = {1,3,4}
+        x(position at which tail is connected) = 2
+        Output: True
+        Explanation: In above test case N = 3.
+        The linked list with nodes N = 3 is
+        given. Then value of x=2 is given which
+        means last node is connected with xth
+        node of linked list. Therefore, there
+        exists a loop.
         `
     }
-
 
 ]
 
 
-export const tags = ["string"]
+export const tags=["string"]
