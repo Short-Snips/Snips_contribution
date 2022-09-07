@@ -45,6 +45,7 @@ filter.addEventListener("complete", ev=>{
 
    if(window.notFound===true)
    {
+      // add Article not found svg
     filter.innerHTML = `
     Articles not found:
   

@@ -144,6 +144,7 @@ filter.addEventListener("complete",ev=>{
 
   
     let cards_html=""
+
     c.forEach(ev=>{
       let content=b.uuid[ev]
     //   console.log(content)  
@@ -161,6 +162,7 @@ filter.addEventListener("complete",ev=>{
       {
         logo_image="java-icon.svg"
       }
+      
       cards_html+=`
       <li class="snippet">
       <div class="snippet-header">
@@ -192,6 +194,12 @@ filter.addEventListener("complete",ev=>{
 
     
     })
+    if (c.length ==0 )
+      {
+        // ad empty svg
+        cards_html+=``
+      }
+
     cards.innerHTML=cards_html
 
     window.shareButton = document.querySelectorAll('.share-icon-container');
