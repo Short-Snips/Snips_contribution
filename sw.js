@@ -7,13 +7,16 @@ var URLS = [
   "/Snips_contribution/article.html",
   "/Snips_contribution/Styles/index.css",
   "/Snips_contribution/Styles/article.css",
-  "/Snips_contribution/saas_index.js",
-  "/Snips_contribution/saas_article.js",
-  "/Snips_contribution/index.js",
-  "/Snips_contribution/article.js",
+  "/Snips_contribution/js/saas_index.js",
+  "/Snips_contribution/js/saas_article.js",
+  "/Snips_contribution/js/index.js",
+  "/Snips_contribution/js/article.js",
   "/Snips_contribution/working_models/index.js",
   "/Snips_contribution/working_models/create_index.js",
-  "/Snips_contribution/Snippets.js"
+  "/Snips_contribution/Snippets.js",
+  "/Snips_contribution/Assests/images/favicon-16x16.png",
+  "/Snips_contribution/Assests/images/favicon-32x32.png",
+  "/Snips_contribution/Assests/images/apple-touch-icon.png"
 ]
 
 
