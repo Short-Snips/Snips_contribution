@@ -8,15 +8,15 @@
     "orientation": "portrait-primary",
     "icons": [
       {
-        "src": "/Snips_contribution/Assests/images/favicon-16x16.png",
+        "src": "/Snips_contribution/Assests/Images/favicon-16x16.png",
         "type": "image/png", "sizes": "16x16"
       },
       {
-        "src": "/Snips_contribution/Assests/images/favicon-32x32.png",
+        "src": "/Snips_contribution/Assests/Images/favicon-32x32.png",
         "type": "image/png", "sizes": "32x32"
       },
       {
-        "src": "/Snips_contribution/Assests/images/apple-touch-icon.png",
+        "src": "/Snips_contribution/Assests/Images/apple-touch-icon.png",
         "type": "image/png", "sizes": "180x180"
       }
     ]

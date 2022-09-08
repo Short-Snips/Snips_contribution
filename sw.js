@@ -14,9 +14,9 @@ var URLS = [
   "/Snips_contribution/working_models/index.js",
   "/Snips_contribution/working_models/create_index.js",
   "/Snips_contribution/Snippets.js",
-  "/Snips_contribution/Assests/images/favicon-16x16.png",
-  "/Snips_contribution/Assests/images/favicon-32x32.png",
-  "/Snips_contribution/Assests/images/apple-touch-icon.png"
+  "/Snips_contribution/Assests/Images/favicon-16x16.png",
+  "/Snips_contribution/Assests/Images/favicon-32x32.png",
+  "/Snips_contribution/Assests/Images/apple-touch-icon.png"
 ]
 
 
