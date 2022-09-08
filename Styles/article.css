@@ -32,7 +32,7 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background-color: #141414;
+  background-color: #333;
   min-height: 100vh;
   /* mobile viewport bug fix */
   min-height: -webkit-fill-available;
@@ -52,10 +52,12 @@ body header a {
 body header .search-box-container {
   width: 400px;
   position: relative;
-  background-color: #242424;
+  background-color: #2f2f2f;
   height: 54px;
   border-radius: 15px;
   padding-left: 15px;
+  border: 2px solid #3f3f3f;
+  transition: all 0.1s ease-in-out;
 }
 body header .search-box-container .search-bar {
   position: absolute;
@@ -76,14 +78,17 @@ body header .search-box-container .search-bar {
 body header .search-box-container .search-bar::-moz-placeholder {
   color: #ffc23c;
   opacity: 0.9;
+  letter-spacing: 0.9;
 }
 body header .search-box-container .search-bar:-ms-input-placeholder {
   color: #ffc23c;
   opacity: 0.9;
+  letter-spacing: 0.9;
 }
 body header .search-box-container .search-bar::placeholder {
   color: #ffc23c;
   opacity: 0.9;
+  letter-spacing: 0.9;
 }
 body header .search-box-container input:focus::-moz-placeholder {
   opacity: 0.7;
@@ -104,6 +109,10 @@ body header .search-box-container .search-icon {
 }
 body header .search-box-container .search-bar:hover + .search-icon {
   opacity: 0.7;
+}
+body header .search-box-container:hover {
+  background-color: #242424;
+  border: 2px solid #3f3f3f;
 }
 body .breadcrumb-container .breadcrumbs {
   list-style: none;
@@ -197,6 +206,11 @@ body article .article-content .code {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   line-height: 1.2;
+}
+body article .article-content .code textarea {
+  overflow-x: hidden !important;
+  padding: 10px;
+  display: block !important;
 }
 body article .article-content .example {
   width: 90%;

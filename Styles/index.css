@@ -32,7 +32,7 @@ body {
   width: 100vw;
   overflow-x: hidden;
   height: 100%;
-  background-color: #141414;
+  background-color: #333;
   min-height: 100vh;
   /* mobile viewport bug fix */
   min-height: -webkit-fill-available;
@@ -98,7 +98,6 @@ body header .header-overlay {
   height: 100%;
   z-index: -1;
   background: rgba(255, 255, 255, 0.195);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.766);
   backdrop-filter: blur(6.4px);
   -webkit-backdrop-filter: blur(6.4px);
 }
@@ -125,11 +124,12 @@ body .content .search-box-container {
   width: 700px;
   height: 54px;
   margin: 0px auto;
-  border: 1px solid #fcfcfc;
+  border: 2px solid #3f3f3f;
   position: relative;
   border-radius: 15px;
-  background-color: #242424;
+  background-color: #2f2f2f;
   transform: translateY(-50%);
+  transition: all 0.1s ease-in-out;
 }
 body .content .search-box-container .search-bar {
   position: absolute;
@@ -149,15 +149,18 @@ body .content .search-box-container .search-bar {
   font-size: 18px;
 }
 body .content .search-box-container .search-bar::-moz-placeholder {
-  color: #ffc23c;
+  color: #fcfcfc;
+  letter-spacing: 0.5px;
   opacity: 0.9;
 }
 body .content .search-box-container .search-bar:-ms-input-placeholder {
-  color: #ffc23c;
+  color: #fcfcfc;
+  letter-spacing: 0.5px;
   opacity: 0.9;
 }
 body .content .search-box-container .search-bar::placeholder {
-  color: #ffc23c;
+  color: #fcfcfc;
+  letter-spacing: 0.5px;
   opacity: 0.9;
 }
 body .content .search-box-container input:focus::-moz-placeholder {
@@ -175,9 +178,14 @@ body .content .search-box-container .search-icon {
   top: 50%;
   transform: translateY(-50%);
   right: 10px;
+  cursor: pointer;
 }
 body .content .search-box-container .search-bar:hover + .search-icon {
   opacity: 0.5;
+}
+body .content .search-box-container:hover {
+  background-color: #242424;
+  border: 2px solid #3f3f3f;
 }
 body .content .filter-section {
   width: 800px;
@@ -188,6 +196,7 @@ body .content .filter-section .filter-head {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   font-size: 14px;
+  margin-bottom: 10px;
 }
 body .content .filter-section .filters-container {
   max-height: 200px;
@@ -202,11 +211,11 @@ body .content .filter-section .filters-container {
   justify-content: center;
   position: relative;
   border-radius: 10px;
-  box-shadow: inset 2px 2px 11px 0px rgba(29, 29, 29, 0.714);
+  box-shadow: rgba(76, 76, 76, 0.53) 0px 1px 1px, rgba(94, 95, 97, 0.47) 0px 0px 1px 1px;
 }
 body .content .filter-section .filters-container .filter {
   padding: 12px 30px;
-  border: 0.1px solid #fcfcfc;
+  border: 0.1px solid #3f3f3f;
   cursor: pointer;
   transition: 0.1s ease-in-out;
   color: #fcfcfc;
@@ -216,7 +225,7 @@ body .content .filter-section .filters-container .filter {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #242424;
+  background-color: #2f2f2f;
   text-transform: capitalize;
 }
 body .content .filter-section .filters-container .filter:hover {
@@ -227,7 +236,7 @@ body .content .filter-section .filters-container .active {
   box-shadow: none;
   background-color: #ffc23c;
   border-color: #ffc23c;
-  color: #141414;
+  color: #333;
 }
 body .content .snippets-container {
   width: 100%;
@@ -247,6 +256,7 @@ body .content .snippets-container .snippet {
   border-image-source: linear-gradient(160deg, #ffc23c, #fcfcfc);
   transition: 0.4s all ease-in-out;
   border-radius: 15px;
+  box-shadow: rgba(73, 73, 75, 0.2) 0px 7px 29px 0px;
 }
 body .content .snippets-container .snippet .snippet-header {
   width: 100%;
@@ -281,11 +291,11 @@ body .content .snippets-container .snippet .snippet-header .share-icon-container
 }
 body .content .snippets-container .snippet .snippet-header .snippet-title-tag {
   align-items: flex-start;
+  justify-content: center;
 }
 body .content .snippets-container .snippet .snippet-header .snippet-title-tag a {
   text-decoration: none;
   color: #fcfcfc;
-  line-height: 0.7;
 }
 body .content .snippets-container .snippet .snippet-header .snippet-title-tag a h2 {
   font-family: "Raleway", sans-serif;
@@ -306,7 +316,7 @@ body .content .snippets-container .snippet .snippet-header .snippet-title-tag .t
   cursor: text;
   color: #242424;
   background-color: white;
-  padding: 5px 8px;
+  padding: 4px 8px;
   border-radius: 5px;
   text-transform: capitalize;
 }

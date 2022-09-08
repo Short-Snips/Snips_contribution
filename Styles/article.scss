@@ -1,4 +1,6 @@
-$bg-black: #141414;
+// $bg-black: #141414;
+$bg-black: #333;
+
 $white: #fcfcfc;
 $gray: #242424;
 $yellow: #ffc23c;
@@ -69,10 +71,12 @@ body {
     .search-box-container {
       width: 400px;
       position: relative;
-      background-color: $gray;
+      background-color: #2f2f2f;
       height: 54px;
       border-radius: 15px;
       padding-left: 15px;
+      border: 2px solid #3f3f3f;
+      transition: all 0.1s ease-in-out;
       .search-bar {
         position: absolute;
         top: 0;
@@ -91,6 +95,7 @@ body {
         &::placeholder {
           color: $yellow;
           opacity: 0.9;
+          letter-spacing: 0.9;
         }
       }
       input:focus::placeholder {
@@ -106,6 +111,10 @@ body {
       }
       .search-bar:hover + .search-icon {
         opacity: 0.7;
+      }
+      &:hover {
+        background-color: $gray;
+        border: 2px solid #3f3f3f;
       }
     }
   }
@@ -207,6 +216,11 @@ body {
         font-family: $raleway;
         font-size: 16px;
         line-height: 1.2;
+        textarea{
+          overflow-x: hidden !important;
+          padding: 10px;
+          display: block !important;
+        }
       }
       .example{
         width: 90%;
