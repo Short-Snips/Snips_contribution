@@ -24,7 +24,7 @@ Please adhere to this project's `code of conduct`.
 
 ## About us
 
-This Open source project is created with the intention of creating one stop study solution to study and revise Data Structures and Algorithms concepts and questions.
+This Open source project is created with the intention of creating one stop solution to study and revise Data Structures and Algorithms concepts and questions.
 
 
 Students can visit our [website](https://short-snips.github.io/Snips_contribution/) to get more structured view of the snippets. we advice students to open issues for the unavailable snippets. 
