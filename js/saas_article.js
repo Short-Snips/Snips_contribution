@@ -193,7 +193,7 @@ window.relatedCOntainer=document.querySelector(".article-snippets-container")
       <div class="snippet-title-tag">
         <a href="article.html?uuid=${content.uuid}" class="title"
           ><h2>${content.title}</h2></a>
-        >
+        
         <div class="tags-container">
         ${content.tags.map(tag =>`<p class="tag">${tag}</p>`)}
         </div>

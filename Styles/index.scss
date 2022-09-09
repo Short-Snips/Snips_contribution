@@ -1,4 +1,5 @@
-$bg-black: #141414;
+// $bg-black: #141414;
+$bg-black: #333;
 $white: #fcfcfc;
 $gray: #242424;
 $yellow: #ffc23c;
@@ -6,7 +7,6 @@ $tertiary: #8d99ae;
 
 $sans: "Open Sans", sans-serif;
 $raleway: "Raleway", sans-serif;
-
 
 *::-webkit-scrollbar-track {
   // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -22,13 +22,6 @@ $raleway: "Raleway", sans-serif;
   // border: 1px solid #555555;
   border-radius: 10px;
 }
-
-
-
-
-
-
-
 
 * {
   padding: 0;
@@ -117,7 +110,7 @@ body {
       height: 100%;
       z-index: -1;
       background: rgba(255, 255, 255, 0.195);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.766);
+      // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.766);
       backdrop-filter: blur(6.4px);
       -webkit-backdrop-filter: blur(6.4px);
       // border: 1px solid rgba(255, 255, 255, 0.3);
@@ -163,11 +156,16 @@ body {
       width: 700px;
       height: 54px;
       margin: 0px auto;
-      border: 1px solid $white;
+      // border: 1px solid #2f2f2f;
+      border: 2px solid #3f3f3f;
+
       position: relative;
       border-radius: 15px;
-      background-color: $gray;
+      // background-color: $gray;
+      background-color: #2f2f2f;
       transform: translateY(-50%);
+      transition: all 0.1s ease-in-out;
+
       .search-bar {
         position: absolute;
         border: none;
@@ -185,7 +183,8 @@ body {
         color: $white;
         font-size: 18px;
         &::placeholder {
-          color: $yellow;
+          color: $white;
+          letter-spacing: 0.5px;
           opacity: 0.9;
         }
       }
@@ -199,9 +198,14 @@ body {
         top: 50%;
         transform: translateY(-50%);
         right: 10px;
+        cursor: pointer;
       }
       .search-bar:hover + .search-icon {
         opacity: 0.5;
+      }
+      &:hover {
+        background-color: $gray;
+        border: 2px solid #3f3f3f;
       }
     }
     .filter-section {
@@ -212,6 +216,7 @@ body {
         font-family: $sans;
         font-weight: 300;
         font-size: 14px;
+        margin-bottom: 10px;
       }
       .filters-container {
         max-height: 200px;
@@ -227,12 +232,14 @@ body {
         position: relative;
         // border: 1px solid $yellow;
         border-radius: 10px;
-        -webkit-box-shadow: inset 2px 2px 11px 0px rgba(18, 18, 18, 0.94);
-        -moz-box-shadow: inset 2px 2px 11px 0px rgba(18, 18, 18, 0.94);
-        box-shadow: inset 2px 2px 11px 0px rgba(29, 29, 29, 0.714);
+        // -webkit-box-shadow: inset 2px 2px 11px 0px rgba(18, 18, 18, 0.94);
+        // -moz-box-shadow: inset 2px 2px 11px 0px rgba(18, 18, 18, 0.94);
+        // box-shadow: inset 2px 2px 11px 0px rgba(29, 29, 29, 0.714);
+        box-shadow: rgb(76 76 76 / 53%) 0px 1px 1px,
+          rgb(94 95 97 / 47%) 0px 0px 1px 1px;
         .filter {
           padding: 12px 30px;
-          border: 0.1px solid $white;
+          border: 0.1px solid #3f3f3f;
           cursor: pointer;
           // box-shadow: 3px 3px $tertiary;
           transition: 0.1s ease-in-out;
@@ -244,7 +251,8 @@ body {
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: $gray;
+          // background-color: $gray;
+          background-color: #2f2f2f;
           text-transform: capitalize;
           &:hover {
             box-shadow: none;
@@ -253,7 +261,7 @@ body {
             // color: $bg-black;
           }
         }
-        .active{
+        .active {
           box-shadow: none;
           background-color: $yellow;
           border-color: $yellow;
@@ -280,6 +288,7 @@ body {
         // border-image-source: linear-gradient(160deg, $gray, $white);
         transition: 0.4s all ease-in-out;
         border-radius: 15px;
+        box-shadow: rgba(73, 73, 75, 0.2) 0px 7px 29px 0px;
         .snippet-header {
           width: 100%;
           display: grid;
@@ -301,23 +310,24 @@ body {
               height: 40px;
             }
           }
-          .share-icon-container{
+          .share-icon-container {
             width: 30px;
             cursor: pointer;
-            img{
+            img {
               width: 100%;
               opacity: 0.5;
-              &:hover{
+              &:hover {
                 opacity: 0.9;
               }
             }
           }
           .snippet-title-tag {
             align-items: flex-start;
+            justify-content: center;
             a {
               text-decoration: none;
               color: $white;
-              line-height: 0.7;
+              // line-height: 0.7;
               h2 {
                 font-family: $raleway;
                 font-weight: 500;
@@ -337,7 +347,7 @@ body {
                 cursor: text;
                 color: $gray;
                 background-color: white;
-                padding: 5px 8px;
+                padding: 4px 8px;
                 border-radius: 5px;
                 text-transform: capitalize;
               }
@@ -527,9 +537,9 @@ body {
         width: 350px;
         min-height: 250px;
         padding: 10px 10px;
-        .snippet-header{
+        .snippet-header {
           grid-template-columns: 0.2fr 3.2fr;
-          .share-icon-container{
+          .share-icon-container {
             display: none;
           }
         }

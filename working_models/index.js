@@ -24,6 +24,7 @@ function create_display_list(index,random,tag)
     }
     else if(random === false && tag !== undefined)
     {
+      tag=tag.toLowerCase()
      let display_pp=index.tags[tag]
       shuffleArray(display_pp)
         let display_pp2=[]
