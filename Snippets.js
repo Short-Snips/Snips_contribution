@@ -311,7 +311,50 @@ The function returns a boolean value after checking if loop is present in the li
         node of linked list. Therefore, there
         exists a loop.
         `
+    },{
+        "uuid":"6da2db23-d0a4-48b8-b0c1-7e1d2b83d0b6",
+        "title": "tlc",
+        "tags": ["Linkedlist"],
+        "language":"java",
+        "short_intro":"example tvlc",
+        "contributor_name":"adarsh",
+        "contribution_date":"7/9/2022",
+        "content":`
+The function returns a boolean value after checking if loop is present in the linkedlist.
+- The time complexity of the function is O(N).
+- The space complexity of the function is O(1).
+        `,
+        "code":`
+        public static boolean detectLoop(Node head){
+        
+            Node slow = head;
+            Node fast = head;
+            
+            while(fast.next != null && fast.next.next != null){
+                slow = slow.next;
+                fast = fast.next.next;
+                if(slow == fast){
+                    return true;
+                }
+            }
+            
+            return false;
+         }
+        `,
+        "examples":`#examples
+        N = 3
+        value[] = {1,3,4}
+        x(position at which tail is connected) = 2
+        Output: True
+        Explanation: In above test case N = 3.
+        The linked list with nodes N = 3 is
+        given. Then value of x=2 is given which
+        means last node is connected with xth
+        node of linked list. Therefore, there
+        exists a loop.
+        `
     }
+    
 
 ]
 
