@@ -1,7 +1,8 @@
 
 ## Short-snips
 
-![banner](https://user-images.githubusercontent.com/80969920/188914668-9362928d-6c16-4e06-8470-24ba214cc272.png)
+![Short Snips](https://user-images.githubusercontent.com/80969920/189299497-0de3c85e-8e06-4b7e-a82b-8267e3735373.png)
+
 
 
 ## Contributing
