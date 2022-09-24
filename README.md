@@ -1,5 +1,5 @@
 
-# Snips - Code Snippet
+# Snips - Code Snippets
 
 ![Short Snips](https://user-images.githubusercontent.com/80969920/189299497-0de3c85e-8e06-4b7e-a82b-8267e3735373.png)
 
