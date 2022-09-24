@@ -1,11 +1,11 @@
 
-## Short-snips
+# Snips - Code Snippet
 
 ![Short Snips](https://user-images.githubusercontent.com/80969920/189299497-0de3c85e-8e06-4b7e-a82b-8267e3735373.png)
 
 
 
-## Contribute
+##🤝 Contribute
 
 Contributions are always welcome!
 
@@ -14,7 +14,7 @@ See `contributing.md` for ways to get started.
 Please adhere to this project's `code of conduct`.
 
 
-## Authors
+##✍️ Authors
 
 - [@NimishBoda](https://github.com/nimish07-ai)
 - [@JanakAvhad](https://github.com/janak27)
@@ -23,7 +23,7 @@ Please adhere to this project's `code of conduct`.
 
 
 
-## About 
+##ℹ️ About 
 
 This Open source project is created with the intention of creating one stop solution to study and revise Data Structures and Algorithms concepts and questions.
 
