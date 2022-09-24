@@ -121,7 +121,8 @@ filter.addEventListener("complete", (ev) => {
     }
 
     cards_html += `
-      <li class="snippet">
+      <li class="snippet" data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom">
       <div class="snippet-header">
         <div class="icon-container">
           <img src="Assests/Images/${logo_image}" alt="" />
