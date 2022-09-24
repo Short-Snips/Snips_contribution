@@ -5,7 +5,7 @@
 
 
 
-##🤝 Contribute
+## 🤝 Contribute
 
 Contributions are always welcome!
 
@@ -23,7 +23,7 @@ Please adhere to this project's `code of conduct`.
 
 
 
-##ℹ️ About 
+## ℹ️ About 
 
 This Open source project is created with the intention of creating one stop solution to study and revise Data Structures and Algorithms concepts and questions.
 
