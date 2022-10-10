@@ -19,6 +19,7 @@ Please adhere to this project's `code of conduct`.
 - [@JanakAvhad](https://github.com/janak27)
 - [@DineshBhuwad](https://github.com/DineshBhuwad)
 - [@RehanRangrez](https://github.com/RehanRangrez)
+- [@simrity13](https://github.com/simrity13)
 
 
 
