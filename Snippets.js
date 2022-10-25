@@ -1,19 +1,19 @@
-export const Articles=[
+export const Articles = [
     {
-        "uuid":"98879124-986e-4a08-887f-5e918e89a558",
+        "uuid": "98879124-986e-4a08-887f-5e918e89a558",
         "title": "Sum of numbers in a string",
         "tags": ["String"],
-        "language":"python",
-        "short_intro":" Function calculates the sum of all the numbers in the given string",
-        "contributor_name":"dinesh bhuwad",
-        "contribution_date":"19/2/2022",
-        "content":`
+        "language": "python",
+        "short_intro": " Function calculates the sum of all the numbers in the given string",
+        "contributor_name": "dinesh bhuwad",
+        "contribution_date": "19/2/2022",
+        "content": `
 The function calculates the sum of all the numbers in the given string.
 - The function traverses through all the characters if the string.
 - If the chracter is a number, the function adds its value to the result.
 - Multiple consecutive numbers are considered as one number.
         `,
-        "code":`# Sum of numbers in a string
+        "code": `# Sum of numbers in a string
 def findSum(str1):
     temp = "0"
     Sum = 0
@@ -25,25 +25,25 @@ def findSum(str1):
             temp = "0"
     return Sum + int(temp)
         `,
-        "examples":`#examples
+        "examples": `#examples
 print(findSum("12ab20z40")) #72
 print(findSum("120nb")) #120
 print(findSum("1m2n2")) #5
         `
-    },{
-        "uuid":"a7ce11fb-a603-405e-b79c-13b13c7ce694",
+    }, {
+        "uuid": "a7ce11fb-a603-405e-b79c-13b13c7ce694",
         "title": "Spiral Traversal of Matrix ",
         "tags": ["Matrix"],
-        "language":"java",
-        "short_intro":"Function prints the elements of the string in a spiral sequence",
-        "contributor_name":"Dinesh Bhuwad",
-        "contribution_date":"5/9/2022",
-        "content":`
+        "language": "java",
+        "short_intro": "Function prints the elements of the string in a spiral sequence",
+        "contributor_name": "Dinesh Bhuwad",
+        "contribution_date": "5/9/2022",
+        "content": `
 The function prints the elements of the string in a spiral sequence.
 - It uses four pointers - right,left,top & bottom.
 - If traverses in a clockwise direction.
         `,
-        "code":`
+        "code": `
 static ArrayList<Integer> spirallyTraverse(int matrix[][], int r, int c)
         {
             int top,bottom,left,right,i;
@@ -87,7 +87,7 @@ static ArrayList<Integer> spirallyTraverse(int matrix[][], int r, int c)
             return a;
         }
         `,
-        "examples":`#examples
+        "examples": `#examples
         matrix[][] = {{1, 2, 3, 4},
                       {5, 6, 7, 8},
                       {9, 10, 11, 12},
@@ -102,19 +102,19 @@ static ArrayList<Integer> spirallyTraverse(int matrix[][], int r, int c)
 
         `
 
-    },{
-        "uuid":"08a729df-9b1f-4572-94cf-fb918fd2a557",
+    }, {
+        "uuid": "08a729df-9b1f-4572-94cf-fb918fd2a557",
         "title": "Search a 2D Matrix",
         "tags": ["Matrix"],
-        "language":"java",
-        "short_intro":"Function searchs for a number in the given integer matrix",
-        "contributor_name":"dinesh bhuwad",
-        "contribution_date":"5/9/2022",
-        "content":`
+        "language": "java",
+        "short_intro": "Function searchs for a number in the given integer matrix",
+        "contributor_name": "dinesh bhuwad",
+        "contribution_date": "5/9/2022",
+        "content": `
 The function searchs for a number in the given integer matrix.
 - The function returns a boolean true if the number is present and false if the value is not present.
         `,
-        "code":`# Searching an element in the matrix
+        "code": `# Searching an element in the matrix
         public boolean searchMatrix(int[][] matrix, int target) {
             for(int i=0;i<matrix.length;i++){
                 if(matrix[i][0]>target) return false;
@@ -126,7 +126,7 @@ The function searchs for a number in the given integer matrix.
              return false;
         }
         `,
-        "examples":`#examples
+        "examples": `#examples
         matrix = [[1,3,5,7],
                   [10,11,16,20],
                   [23,30,34,60]], 
@@ -139,19 +139,19 @@ The function searchs for a number in the given integer matrix.
         target = 13
         # false
         `
-    },{
-        "uuid":"641b5f3f-9cc0-4b02-b914-21dff4f1bcf7",
+    }, {
+        "uuid": "641b5f3f-9cc0-4b02-b914-21dff4f1bcf7",
         "title": "Median in a row-wise sorted Matrix",
         "tags": ["Matrix"],
-        "language":"java",
-        "short_intro":" Function returns the median for the row wise sorted matrix",
-        "contributor_name":"dinesh bhuwad",
-        "contribution_date":"5/9/2022",
-        "content":`
+        "language": "java",
+        "short_intro": " Function returns the median for the row wise sorted matrix",
+        "contributor_name": "dinesh bhuwad",
+        "contribution_date": "5/9/2022",
+        "content": `
 The function returns the median for the row wise sorted matrix.
 - Given a row wise sorted matrix of size RxC where R and C are always odd, the function returns  the median of the matrix.
         `,
-        "code":`# Median in a row-wise sorted Matrix
+        "code": `# Median in a row-wise sorted Matrix
         int median(int matrix[][], int r, int c) {
             ArrayList<Integer>b = new ArrayList<>();
              for(int i = 0; i < r ;i++){
@@ -168,7 +168,7 @@ The function returns the median for the row wise sorted matrix.
            return b.get(a);
         }
         `,
-        "examples":`#examples
+        "examples": `#examples
         R = 3, C = 3
         M = [[1, 3, 5], 
              [2, 6, 9], 
@@ -180,19 +180,19 @@ The function returns the median for the row wise sorted matrix.
         # 2`
     },
     {
-        "uuid":"0f620672-b230-4c1b-8d60-74c1cc4dff21",
+        "uuid": "0f620672-b230-4c1b-8d60-74c1cc4dff21",
         "title": "Square root of number without using inbuilt function",
         "tags": ["Math"],
-        "language":"java",
-        "short_intro":" Function calculates the sum of all the numbers in the given string",
-        "contributor_name":"Janak Avhad",
-        "contribution_date":"19/2/2022",
-        "content":`
+        "language": "java",
+        "short_intro": " Function calculates the sum of all the numbers in the given string",
+        "contributor_name": "Janak Avhad",
+        "contribution_date": "19/2/2022",
+        "content": `
         Given a non-negative integer x, compute and return the square root of x.
 
         Since the return type is an integer, the decimal digits are truncated, and only the integer part of the result is returned.
         `,
-        "code":`# Square root of number without using inbuilt function
+        "code": `# Square root of number without using inbuilt function
         class Solution {
             public int mySqrt(int x) {
              if (x == 0 || x == 1) return x;
@@ -215,7 +215,7 @@ The function returns the median for the row wise sorted matrix.
             }
         }
         `,
-        "examples":`#examples
+        "examples": `#examples
         Example 1:
 
         Input: x = 4
@@ -226,20 +226,20 @@ The function returns the median for the row wise sorted matrix.
         Output: 2
         Explanation: The square root of 8 is 2.82842..., and since the decimal part is truncated, 2 is returned.
         `
-    },{
-        "uuid":"da9c607e-98e7-4f96-b892-dca06dba10d9",
+    }, {
+        "uuid": "da9c607e-98e7-4f96-b892-dca06dba10d9",
         "title": "Reverse a LinkedList ",
         "tags": ["linkedlist"],
-        "language":"java",
-        "short_intro":" The given function reverses the given linkedlist",
-        "contributor_name":"dinesh bhuwad",
-        "contribution_date":"7/9/2022",
-        "content":`
+        "language": "java",
+        "short_intro": " The given function reverses the given linkedlist",
+        "contributor_name": "dinesh bhuwad",
+        "contribution_date": "7/9/2022",
+        "content": `
     The function reverses the given linkedlist.
     - The time complexity of the function is O(N).
     - The space complexity of the function is O(1).
         `,
-        "code":`
+        "code": `
         Node reverse(Node node)
         {
             Node prev = null;
@@ -260,7 +260,7 @@ The function returns the median for the row wise sorted matrix.
             }
         }
         `,
-        "examples":`#examples
+        "examples": `#examples
         Input : 1->2->3->4->NULL
         Output : 4->3->2->1->NULL
         
@@ -269,20 +269,20 @@ The function returns the median for the row wise sorted matrix.
         
         `
 
-    },{
-        "uuid":"6da2db53-d0a4-48b8-b0c1-7e1d2b83d0b6",
+    }, {
+        "uuid": "6da2db53-d0a4-48b8-b0c1-7e1d2b83d0b6",
         "title": "Detect loops in a given linkedlist",
         "tags": ["Linkedlist"],
-        "language":"java",
-        "short_intro":" Function calculates the sum of all the numbers in the given string",
-        "contributor_name":"dinesh bhuwad",
-        "contribution_date":"7/9/2022",
-        "content":`
+        "language": "java",
+        "short_intro": " Function calculates the sum of all the numbers in the given string",
+        "contributor_name": "dinesh bhuwad",
+        "contribution_date": "7/9/2022",
+        "content": `
 The function returns a boolean value after checking if loop is present in the linkedlist.
 - The time complexity of the function is O(N).
 - The space complexity of the function is O(1).
         `,
-        "code":`
+        "code": `
         public static boolean detectLoop(Node head){
         
             Node slow = head;
@@ -299,7 +299,7 @@ The function returns a boolean value after checking if loop is present in the li
             return false;
          }
         `,
-        "examples":`#examples
+        "examples": `#examples
         N = 3
         value[] = {1,3,4}
         x(position at which tail is connected) = 2
@@ -311,9 +311,41 @@ The function returns a boolean value after checking if loop is present in the li
         node of linked list. Therefore, there
         exists a loop.
         `
-    }
+    },
+    {
+        "uuid": "c79aa6ea-f31e-4a40-9079-aee38aad77ad",
+        "title": "inorder traversal ",
+        "tags": ["BST"],
+        "language": "java",
+        "short_intro": "function that accepts a tree as input and prints out in-order representation of tree",
+        "contributor_name": "legit person",
+        "contribution_date": "25/10/2022 ",
+        "content": `
+        Inorder traversal is a traversal technique for binary trees. It traverses the trees in the following order : left-center-right.
+        TC : O(N)
+        SC:O(N)
+        `,
+        "code": `
+        public static void inorder(Node root){
+            if (root == null) {
+                return;
+            }
+            inorder(root.left);
+            System.out.print(root.data + " ");
+            inorder(root.right);
+        }    
+        `,
+        "examples": `
+        Input 132 
+        Output 321
+
+        Input 10,20,30,40,60,50
+        Output: 40 20 60 10 50 30
+        `
+    
+    },
 
 ]
 
 
-export const tags=["string"]
+export const tags = ["string"]
